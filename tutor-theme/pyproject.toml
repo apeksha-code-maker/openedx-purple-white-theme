@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tutor-contrib-openedx-theme"
+version = "0.1.0"
+description = "Custom theme plugin for Open edX using Tutor and Indigo"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "AGPL-3.0" }
+authors = [
+    { name = "Open edX Theme Customization contributors" }
+]
+dependencies = [
+    "tutor>=19.0.0,<20.0.0",
+]
+
+[project.entry-points."tutor.plugin.v1"]
+openedxtheme = "tutortheme.plugin"
+
+[tool.setuptools.packages.find]
+include = ["tutortheme*"]
